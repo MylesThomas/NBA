@@ -1,0 +1,29 @@
+---
+title: "NBA Live Predictive Analysis"
+author: "Myles Thomas"
+date: "2/10/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r load in libraries, include=FALSE}
+library(tidyverse)
+library(readxl)
+```
+
+
+```{r read in xlsx dataset, view the head of dataframe}
+# Read in from excel
+df.FULL <- read_xlsx("HalftimeVSCover.xlsx")
+
+# Filled in NA as 0
+df.FULL[is.na(df.FULL)] <- 0
+
+df.FULL
+```
+
